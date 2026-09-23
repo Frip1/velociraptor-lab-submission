@@ -1,0 +1,11 @@
+LET Cutoff <= timestamp(epoch=now() - 1800)
+
+SELECT OSPath,
+       Name,
+       Mtime,
+       Data.value AS Command
+FROM glob(
+    globs='HKEY_USERS/*/Software/Microsoft/Windows/CurrectVersion/Run/*',
+    accessor='registry'
+)
+WHERE Mtime > Cutoff

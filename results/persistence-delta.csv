@@ -1,0 +1,3 @@
+OSPath,Name,Mtime,Command
+HKEY_USERS\S-1-5-21-3550465092-4103403356-94291339-1000\SOFTWARE\Microsoft\Windows\CurrentVersion\Run\LabPersistence,LabPersistence,2026-09-21T11:57:02.2158124Z,C:\Users\Ivan\AppData\Local\Temp\lab-begin.exe
+HKEY_USERS\S-1-5-21-3550465092-4103403356-94291339-1000\SOFTWARE\Microsoft\Windows\CurrentVersion\Run\OneDrive,OneDrive,2026-09-21T11:57:02.2158124Z,"""C:\Users\Ivan\AppData\Local\Microsoft\OneDrive\OneDrive.exe"" /background"

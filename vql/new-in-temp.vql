@@ -1,0 +1,11 @@
+LET Cutoff <= timestamp(epoch=now() - 1800)
+
+SELECT OSPath,
+       Name,
+       Size,
+       Mtime
+FROM glob(
+    globs='C:/Users/*/AppData/Local/Temp/**'
+)
+WHERE NOT IsDir
+  AND Btime > Cutoff

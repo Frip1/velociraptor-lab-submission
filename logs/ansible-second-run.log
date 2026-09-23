@@ -1,0 +1,21 @@
+
+PLAY [Install Velociraptor Agent on Debian] ************************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [192.168.56.30]
+
+TASK [Install Python dependency] ***********************************************
+ok: [192.168.56.30]
+
+TASK [Copy Velociraptor DEB package] *******************************************
+ok: [192.168.56.30]
+
+TASK [Install Velociraptor Agent] **********************************************
+ok: [192.168.56.30]
+
+TASK [Enable and start Velociraptor service] ***********************************
+ok: [192.168.56.30]
+
+PLAY RECAP *********************************************************************
+192.168.56.30              : ok=5    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+

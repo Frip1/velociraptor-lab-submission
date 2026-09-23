@@ -1,0 +1,17 @@
+# Installation packages
+automation/files/
+*.deb
+*.msi
+
+# Velociraptor configuration and secrets
+server.config.yaml
+client.config.yaml
+*.key
+*.pem
+*.pfx
+.env
+
+# Temporary files
+*.tmp
+*.swp
+*~

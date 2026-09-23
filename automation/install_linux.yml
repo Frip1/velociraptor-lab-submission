@@ -1,0 +1,28 @@
+---
+- name: Install Velociraptor Agent on Debian
+  hosts: linux_clients
+  become: true
+
+  tasks:
+
+    - name: Install Python dependency
+      ansible.builtin.apt:
+        name: python3-debian
+        state: present
+
+    - name: Copy Velociraptor DEB package
+      ansible.builtin.copy:
+        src: files/velociraptor_client_0.77.1_amd64.deb
+        dest: /tmp/velociraptor_client_0.77.1_amd64.deb
+        mode: "0644"
+
+    - name: Install Velociraptor Agent
+      ansible.builtin.apt:
+        deb: /tmp/velociraptor_client_0.77.1_amd64.deb
+        state: present
+
+    - name: Enable and start Velociraptor service
+      ansible.builtin.systemd:
+        name: velociraptor_client
+        enabled: true
+        state: started
